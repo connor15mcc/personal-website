@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: 'PT Serif', serif;
+}
+
+:root {
+  --primary-color: #d7773f;
+  --secondary-color: #4f66cc;
+  --teriary-color: #94ccd3;
+  --contrast-color: #edf0f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Style ONLY applied in dark mode */
+  /* :root {
+    --primary-color: #d6eadf;
+    --contrast-color: #162b32;
+  } */
+}

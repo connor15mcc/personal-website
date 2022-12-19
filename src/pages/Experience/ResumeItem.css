@@ -1,0 +1,17 @@
+.school-info {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.school-info hr {
+  width: 100%;
+}
+
+.school-name {
+  font-weight: bold;
+}
+
+.school-dates {
+  font-style: italic;
+}

@@ -1,0 +1,43 @@
+#home {
+  min-height: calc(100% - 4em);
+  padding: 25% 0;
+  background-color: var(--secondary-color);
+
+  box-shadow: 0 0 0 100vmax var(--secondary-color);
+  clip-path: inset(0 -100vmax);
+}
+
+.name {
+  font-size: 5em;
+  color: var(--primary-color);
+  /* font-weight: bold; */
+}
+
+.intro {
+  font-size: 1.2em;
+}
+
+.tagline {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+
+button {
+  color: var(--primary-color);
+  font-weight: bold;
+  border: 0.2em solid var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+.arrow {
+  transition: 0.5s;
+}
+
+button:hover .arrow {
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
