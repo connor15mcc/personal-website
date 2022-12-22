@@ -7,6 +7,7 @@ nav {
   text-decoration: none;
   padding: 2em;
   font-variant: small-caps;
+  border-bottom: 1px solid #000;
 }
 
 .nav-left a {

@@ -1,17 +1,35 @@
-.school-info {
+.item-info {
+  margin-bottom: 0.25em;
+}
+
+.item-spacing {
+  margin-bottom: 0.75em;
+}
+
+.item-header {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
 }
 
-.school-info hr {
+.item-info hr {
   width: 100%;
 }
 
-.school-name {
+.item-name {
   font-weight: bold;
 }
 
-.school-dates {
+.item-date {
   font-style: italic;
+}
+
+.item-bullets {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.item-bullet::before {
+  content: '-';
+  padding: 0 0.5em 0em 1.5em;
 }

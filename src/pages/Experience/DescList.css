@@ -13,3 +13,8 @@ dt::after {
 dd {
   margin: 0 0 0 9.5em;
 }
+
+dt,
+dd {
+  padding-bottom: 0.25em;
+}

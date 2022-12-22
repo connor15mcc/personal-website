@@ -1,20 +1,17 @@
-import './Education.css';
-
 import DescList from './DescList';
 import ResumeItem from './ResumeItem';
 
 const Education = () => {
   return (
     <>
-      <div className="education-section">
-        <div className="section-title">Education</div>
+      <div className="resume-subsection">
+        <div className="resume-subsection-title">Education</div>
         <ResumeItem
           name="Cornell University, College of Engineering"
           location="Ithaca, NY"
           title="B.S. in Computer Science, Double Minors in Operations Research & Business"
           date="Expected May 2023"
         ></ResumeItem>
-        <div className="class-info"></div>
         <DescList
           items={[
             {
