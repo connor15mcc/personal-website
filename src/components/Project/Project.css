@@ -1,0 +1,91 @@
+.project-card {
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: 0 0 0.25em;
+  border-radius: 1em;
+}
+
+/* TODO: cleanup this media query selector */
+@media only screen and (min-width: 41.5em) {
+  .project-card-wide {
+    grid-column: span 2;
+  }
+
+  .project-card-big {
+    grid-column: span 2;
+  }
+}
+
+@media only screen and (min-height: 40em) {
+  .project-card-tall {
+    grid-row: span 2;
+  }
+
+  .project-card-big {
+    grid-row: span 2;
+  }
+}
+
+.project-card-hover:hover .project-card-image {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.project-card-image {
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project-card-content {
+  box-shadow: 0 0 0.15em;
+
+  background-color: rgba(225, 225, 225, 0.95);
+  overflow: hidden;
+
+  padding: 0.5em;
+
+  border-radius: 0.5em;
+
+  position: absolute;
+  margin: auto;
+  bottom: 0.5em;
+  left: 0.5em;
+  right: 0.5em;
+}
+
+.project-card-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.project-card-secondrow {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.5em 0;
+  font-size: 0.6em;
+  color: #555;
+}
+
+.project-card-tag {
+  color: darkgreen;
+}
+
+.project-card-tag::before {
+  content: '';
+  position: absolute;
+  height: 1em;
+  border: 5px solid darkgreen;
+  border-radius: 50%;
+  margin-left: -1.35em;
+}
+
+.project-card-desc {
+  font-size: 0.9em;
+  line-height: 1.2em;
+}

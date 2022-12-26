@@ -10,6 +10,8 @@ body {
   --secondary-color: #4f66cc;
   --teriary-color: #94ccd3;
   --contrast-color: #edf0f6;
+
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

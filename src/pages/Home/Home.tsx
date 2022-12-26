@@ -1,9 +1,11 @@
 import './Home.css';
 
 import { KeyboardArrowRight } from '@styled-icons/material-rounded/KeyboardArrowRight';
-import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div id="home">
       <p className="home-intro">Hi, my name is</p>
@@ -17,7 +19,7 @@ const Home = () => {
         and operations research.
       </p>
       <div>
-        <button className="home-button">
+        <button className="home-button" onClick={() => navigate('/#experience')}>
           View Experience
           <KeyboardArrowRight size="2em" className="arrow"></KeyboardArrowRight>
         </button>

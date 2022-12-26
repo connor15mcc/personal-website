@@ -7,7 +7,7 @@ import SkillsInterests from './SkillsInterests';
 
 const Experience = () => {
   return (
-    <div className="resume-section" id="resume-section">
+    <div className="resume-section" id="experience">
       <h1 className="resume-title">Connor McCarthy</h1>
       <Education></Education>
       <ProfessionalExp></ProfessionalExp>
