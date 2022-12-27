@@ -49,12 +49,6 @@ function App() {
       </Suspense>
     </Template>
   );
-  // return (
-  //   <Template>
-  //     <Home></Home>
-  //     <Resume></Resume>
-  //   </Template>
-  // );
 }
 
 export default App;

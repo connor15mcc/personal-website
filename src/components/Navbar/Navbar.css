@@ -7,11 +7,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 4em;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   text-decoration: none;
   padding: 2em;
+
   font-variant: small-caps;
-  border-bottom: 1px solid #000;
+  color: var(--ll-gray);
+  font-weight: bold;
 }
 
 .nav-left a {

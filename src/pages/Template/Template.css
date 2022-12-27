@@ -1,11 +1,23 @@
 .main-container {
   width: 1000px;
   padding: 0 1em;
-  margin: 0 auto 5em auto;
+  margin: 0 auto 0em auto;
 }
 
 @media only screen and (max-width: 1000px) {
   .main-container {
     width: 100%;
   }
+}
+
+.about-contact-profiles {
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.about-contact-profiles > * {
+  margin: 0em 1em;
+  color: #555;
 }

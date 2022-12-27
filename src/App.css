@@ -5,11 +5,19 @@ body {
   background-color: #eee;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 :root {
-  --primary-color: #d7773f;
-  --secondary-color: #4f66cc;
-  --teriary-color: #94ccd3;
-  --contrast-color: #edf0f6;
+  --primary-color: #e0be56;
+  --secondary-color: #121e46;
+
+  --ll-gray: #ccc;
+  --l-gray: #aaa;
+  --gray: #999;
+  --d-gray: #666;
+  --d-gray: #333;
 
   scroll-behavior: smooth;
 }

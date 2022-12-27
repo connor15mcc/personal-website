@@ -1,0 +1,11 @@
+#about {
+  font-size: 1.1em;
+  line-height: 1.4em;
+
+  max-height: calc(100vh - 4em);
+  padding: 5% 10% 0 10%;
+}
+
+.about-paragraph {
+  padding-bottom: 1em;
+}

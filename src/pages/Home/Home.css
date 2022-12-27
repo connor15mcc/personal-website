@@ -1,7 +1,11 @@
 #home {
   min-height: calc(100vh - 4em);
-  padding: 25% 10%;
+  padding: 5% 10%;
+
+  display: grid;
+  align-content: center;
   background-color: var(--secondary-color);
+  color: var(--ll-gray);
 
   box-shadow: 0 0 0 100vmax var(--secondary-color);
   clip-path: inset(0 -100vmax);
