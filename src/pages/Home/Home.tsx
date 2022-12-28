@@ -9,9 +9,12 @@ const Home = () => {
   return (
     <div id="home">
       <p className="home-intro">Hi, my name is</p>
-      <h1 className="home-name">
-        Connor<br></br>McCarthy
-      </h1>
+      <div className="home-firstline">
+        <img src="me.jpg" alt="Connor McCarthy" className="home-picture" />
+        <h1 className="home-name">
+          Connor<br></br>McCarthy
+        </h1>
+      </div>
       <p className="home-tagline">
         I&apos;m a senior engineering student at Cornell University studying computer
         science and seeking industry experience. I&apos;m especially passionate about

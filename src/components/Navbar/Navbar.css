@@ -1,5 +1,15 @@
 header {
   display: unset;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+
+  top: 0;
+  transition: 0.3s;
+}
+
+header.hidden {
+  top: -5em;
 }
 
 nav {
@@ -10,6 +20,7 @@ nav {
   background-color: var(--secondary-color);
   text-decoration: none;
   padding: 2em;
+  box-shadow: 0em 0em 0.2em black;
 
   font-variant: small-caps;
   color: var(--ll-gray);
@@ -24,4 +35,22 @@ nav {
 .nav-right a {
   font-size: 1.15em;
   margin: 1rem;
+}
+
+@media only screen and (max-width: 520px) {
+  nav {
+    padding: 1em;
+  }
+
+  .nav-left a {
+    margin: 0.5rem;
+  }
+
+  .nav-right a {
+    margin: 0.5rem;
+  }
+}
+
+.nav-active {
+  color: var(--primary-color);
 }

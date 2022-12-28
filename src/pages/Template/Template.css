@@ -1,13 +1,18 @@
 .main-container {
-  width: 1000px;
+  width: clamp(320px, 100%, 1000px);
   padding: 0 1em;
-  margin: 0 auto 0em auto;
+  margin: 0 auto 0 auto;
 }
 
-@media only screen and (max-width: 1000px) {
-  .main-container {
-    width: 100%;
-  }
+.main-container::before {
+  content: '';
+  position: relative;
+  display: block;
+  height: 4em;
+  background-color: var(--secondary-color);
+
+  width: 200vw;
+  left: -100vw;
 }
 
 .about-contact-profiles {
@@ -19,5 +24,5 @@
 
 .about-contact-profiles > * {
   margin: 0em 1em;
-  color: #555;
+  color: var(--d-gray);
 }

@@ -28,7 +28,7 @@ const Template = (props: TemplateProps) => {
       <Navbar />
 
       <div className="main-container">{props.children}</div>
-      <div className="about-contact-profiles">
+      <footer className="about-contact-profiles">
         <a
           href="https://www.linkedin.com/in/connormccarthy15/"
           target="_blank"
@@ -42,7 +42,7 @@ const Template = (props: TemplateProps) => {
         <a href="mailto:connor15mcc@gmail.com" target="_blank" rel="noreferrer">
           <Mail size="1em"></Mail>
         </a>
-      </div>
+      </footer>
     </HelmetProvider>
   );
 };

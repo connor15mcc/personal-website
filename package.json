@@ -11,12 +11,14 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.191",
     "@types/react-router-dom": "^5.3.3",
     "classnames": "^2.3.2",
     "color-thief-react": "^2.1.0",
     "colorthief": "npm:@pioug/colorthief@^3.0.1",
     "css-resetter": "^1.2.3",
     "dominant-color": "^0.0.1",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ellipsis-text": "^1.2.1",
