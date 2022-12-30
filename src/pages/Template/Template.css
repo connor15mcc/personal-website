@@ -4,7 +4,7 @@
   margin: 0 auto 0 auto;
 }
 
-.main-container::before {
+/* .main-container::before {
   content: '';
   position: relative;
   display: block;
@@ -13,7 +13,7 @@
 
   width: 200vw;
   left: -100vw;
-}
+} */
 
 .about-contact-profiles {
   display: flex;
