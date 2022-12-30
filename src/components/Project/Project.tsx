@@ -7,8 +7,9 @@ export interface ProjectProp {
   weight?: number;
   title: string;
   imagePath: string;
+  date: Date;
   link?: string;
-  date: string;
+  resumeDesc?: string;
   desc: string;
   category?: string;
 }
@@ -48,6 +49,7 @@ const Project = (props: ProjectProp) => {
         'project-card-big': props.weight == 4,
         'project-card-hover': props.link,
       })}
+      id={props.title}
       onClick={openLink}
       onKeyDown={openLink}
       role="button"

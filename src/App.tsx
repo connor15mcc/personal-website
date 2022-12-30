@@ -1,13 +1,17 @@
 import 'css-resetter';
 import './App.css';
 
-import { lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { Suspense, useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
+// TODO: find out how to disable typing for imported yaml file;
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import data from '../data.yaml';
 import About from './pages/About/About';
-import Resume from './pages/Experience/Resume';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
+import Resume from './pages/Resume/Resume';
 import Template from './pages/Template/Template';
 
 function App() {
@@ -30,21 +34,21 @@ function App() {
       }, 0);
     }
   }, [pathname, hash, key]); // do this on route change
+
+  const homePage = (
+    <>
+      <Home data={data.basics} />
+      <Resume data={data} name={data.basics.name} />
+    </>
+  );
+
   return (
     <Template>
-      <Suspense fallback={<Home />}>
+      <Suspense fallback={homePage}>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Home></Home>
-                <Resume></Resume>
-              </>
-            }
-          />
-          <Route path="/projects" element={<Projects></Projects>} />
-          <Route path="/about" element={<About></About>} />
+          <Route path="/" element={homePage} />
+          <Route path="/projects" element={<Projects data={data.projects} />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Suspense>
     </Template>

@@ -4,7 +4,7 @@ export interface ProjectProp {
   imagePath: string;
   link?: string;
   date: string;
-  catogory?: string;
+  category?: string;
   desc: string;
 }
 

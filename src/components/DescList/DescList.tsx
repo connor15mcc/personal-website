@@ -2,11 +2,11 @@ import './DescList.css';
 
 import React from 'react';
 
-const DescList = (props: DescriptionList) => {
+const DescList = (props: { items: DescriptionItem[] }) => {
   return (
     <dl className="desc-list">
       {props.items.map((p, idx) => (
-        <React.Fragment key={idx}>
+        <React.Fragment key={idx + p.label}>
           <dt className="desc-label">{p.label}</dt>
           <dd className="desc-content">{p.content}</dd>
         </React.Fragment>
@@ -15,13 +15,9 @@ const DescList = (props: DescriptionList) => {
   );
 };
 
-interface DescriptionItem {
+export interface DescriptionItem {
   label: string;
-  content: string;
-}
-
-interface DescriptionList {
-  items: Array<DescriptionItem>;
+  content: string | React.ReactFragment;
 }
 
 export default DescList;

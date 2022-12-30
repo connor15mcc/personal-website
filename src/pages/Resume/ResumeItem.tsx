@@ -15,14 +15,14 @@ const ResumeItem = (props: ItemProps) => {
       <ul className="item-bullets">
         {props.bullets &&
           props.bullets.map((b, i) => (
-            <li key={i} className="item-bullet">
+            <li key={i + b} className="item-bullet">
               {b}
             </li>
           ))}
         {props.skills && (
           <li className="item-bullet">
             <b>Used: </b>
-            {props.skills}
+            {props.skills}.
           </li>
         )}
       </ul>
