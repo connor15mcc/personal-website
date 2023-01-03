@@ -9,12 +9,13 @@ const Education = (props: {
     location: string;
     degree: string;
     end_date: string;
+    link?: string;
     coursework: {
       type: string;
       classes: {
         name: string;
         number: string;
-        link: string;
+        link?: string;
       }[];
     }[];
   };
@@ -24,10 +25,12 @@ const Education = (props: {
       <div className="resume-subsection">
         <div className="resume-subsection-title">Education</div>
         <ResumeItem
+          id={props.data.institution.split(' ')[0]}
           name={props.data.institution + ', ' + props.data.college}
           location={props.data.location}
           title={props.data.degree}
           date={props.data.end_date}
+          link={props.data.link}
         ></ResumeItem>
         <DescList
           items={props.data.coursework.map((elt) => ({

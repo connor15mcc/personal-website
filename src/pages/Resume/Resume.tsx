@@ -13,7 +13,15 @@ const Resume = (props: {
       location: string;
       degree: string;
       end_date: string;
-      coursework: { type: string; classes: string[] }[];
+      link?: string;
+      coursework: {
+        type: string;
+        classes: {
+          name: string;
+          number: string;
+          link?: string;
+        }[];
+      }[];
     };
     professional_experience: {
       name: string;
@@ -23,6 +31,7 @@ const Resume = (props: {
       title: string;
       start_date: string;
       end_date: string;
+      link?: string;
       highlights?: string[];
       tech_recap?: string;
     }[];
@@ -34,6 +43,7 @@ const Resume = (props: {
       title: string;
       start_date: string;
       end_date: string;
+      link?: string;
       highlights?: string[];
       tech_recap?: string;
     }[];
@@ -54,8 +64,14 @@ const Resume = (props: {
     <div className="resume-section" id="experience">
       <h1 className="resume-title">{props.name}</h1>
       <Education data={props.data.university} />
-      <Experience type="Professional" data={props.data.professional_experience} />
-      <Experience type="Extracurricular" data={props.data.extracurricular_experience} />
+      <Experience
+        type="Professional"
+        data={props.data.professional_experience}
+      />
+      <Experience
+        type="Extracurricular"
+        data={props.data.extracurricular_experience}
+      />
       <SkillsInterests
         skills={props.data.skills}
         projects={props.data.projects}

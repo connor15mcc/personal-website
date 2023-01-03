@@ -4,9 +4,25 @@ import classNames from 'classnames';
 
 const ResumeItem = (props: ItemProps) => {
   return (
-    <div className={classNames('item-info', { 'item-spacing': props.bottomMargin })}>
+    <div
+      className={classNames('item-info', {
+        'item-spacing': props.bottomMargin,
+      })}
+      id={props.id ? props.id : props.name}
+    >
       <div className="item-header">
-        <span className="item-name">{props.name}</span>
+        {props.link ? (
+          <a
+            className="item-name"
+            href={props.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {props.name}
+          </a>
+        ) : (
+          <span className="item-name">{props.name}</span>
+        )}
         <span className="item-location">{props.location}</span>
         <hr></hr>
         <span className="item-title">{props.title}</span>
@@ -31,10 +47,12 @@ const ResumeItem = (props: ItemProps) => {
 };
 
 export interface ItemProps {
+  id?: string;
   name: string;
   location: string;
   title: string;
   date: string;
+  link?: string;
   bottomMargin?: boolean;
   bullets?: string[];
   skills?: string;

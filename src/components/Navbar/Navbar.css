@@ -1,5 +1,4 @@
 header {
-  display: unset;
   z-index: 10;
   position: sticky;
   width: 100%;
@@ -9,7 +8,7 @@ header {
 }
 
 header.hidden {
-  top: -5em;
+  top: -100vh;
 }
 
 nav {

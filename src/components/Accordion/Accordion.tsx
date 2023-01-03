@@ -5,7 +5,10 @@ import { ArrowsAngleExpand } from '@styled-icons/bootstrap/ArrowsAngleExpand';
 import classNames from 'classnames';
 import { useState } from 'react';
 
-const Accordion = (props: { label: string; expanded: React.ReactFragment[] }) => {
+const Accordion = (props: {
+  label: string;
+  expanded: React.ReactFragment[];
+}) => {
   const [open, setOpen] = useState(false);
 
   const closedAccordion = (

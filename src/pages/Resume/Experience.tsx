@@ -10,6 +10,7 @@ const Experience = (props: {
     title: string;
     start_date: string;
     end_date: string;
+    link?: string;
     highlights?: string[];
     tech_recap?: string;
   }[];
@@ -27,6 +28,7 @@ const Experience = (props: {
             title: string;
             start_date: string;
             end_date: string;
+            link?: string;
             highlights?: string[];
             tech_recap?: string;
           }) => (
@@ -37,10 +39,11 @@ const Experience = (props: {
               title={elt.title}
               date={elt.start_date + ' – ' + elt.end_date}
               bottomMargin={true}
+              link={elt.link}
               bullets={elt.highlights}
               skills={elt.tech_recap}
             />
-          ),
+          )
         )}
       </div>
     </>

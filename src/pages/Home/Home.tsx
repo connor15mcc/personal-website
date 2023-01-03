@@ -25,7 +25,10 @@ const Home = (props: {
       </div>
       <p className="home-tagline">{props.data.tagline}</p>
       <div>
-        <button className="home-button" onClick={() => navigate('/#experience')}>
+        <button
+          className="home-button"
+          onClick={() => navigate('/#experience')}
+        >
           View Experience
           <KeyboardArrowRight size="2em" className="arrow"></KeyboardArrowRight>
         </button>
