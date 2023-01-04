@@ -44,7 +44,12 @@ const Project = (props: ProjectProp) => {
     }
   }
 
-  const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format;
+  console.log(props.date);
+  const dateFormat = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    year: 'numeric',
+  }).format;
+  const date = new Date(props.date);
 
   return (
     <div
@@ -68,9 +73,7 @@ const Project = (props: ProjectProp) => {
       <div className="project-card-content" style={titleStyle}>
         <h3 className="project-card-title">{props.title}</h3>
         <div className="project-card-secondrow">
-          <span className="project-card-date">
-            {monthName(props.date) + ' ' + props.date.getFullYear()}
-          </span>
+          <span className="project-card-date">{dateFormat(date)}</span>
           {props.category == 'Coursework' && (
             <span className="project-card-tag">Coursework</span>
           )}
