@@ -24,8 +24,10 @@ jobs:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: website/package-lock.json
-      # - name: Install dependencies
-      #   uses: bahmutov/npm-install@v1
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: website
       - name: Build project
         run: cd website && npm run build
       - name: Upload production-ready build files
