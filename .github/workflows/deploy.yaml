@@ -10,19 +10,32 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          path: main
+      - name: Checkout data repo
+        uses: actions/checkout@v3
+        with:
+          repository: connor15mcc/resume
+          path: resume
+          token: ${{ secrets.RESUME_SECRET }}
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 16
+        working-directory: main
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        working-directory: main
       - name: Build project
         run: npm run build
+        working-directory: main
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
           path: ./dist
+        working-directory: main
   deploy:
     name: Deploy
     needs: build
