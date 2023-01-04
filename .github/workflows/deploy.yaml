@@ -28,32 +28,33 @@ jobs:
         uses: bahmutov/npm-install@v1
         with:
           working-directory: website
-      - name: Build & Deploy
+      - name: Build project
         run: |
-          git config user.name "Automated"
-          git config user.email "actions@users.noreply.github.com"
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/connor15mcc/personal-website.git
-          npm run deploy
-      #   run: cd website && npm run build
-      # - name: Upload production-ready build files
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: production-files
-      #     path: ./website/dist
-  # deploy:
-  #   name: Deploy
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   if: github.ref == 'refs/heads/main'
-  #   steps:
-  #     - name: Download artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: production-files
-  #         path: ./pages
-  #     - name: Deploy to GitHub Pages
-  #       uses: peaceiris/actions-gh-pages@v3
-  #       with:
-  #         github_token: ${{ secrets.GITHUB_TOKEN }}
-  #         publish_dir: ./pages
-  #         allow_empty_commit: true
+          cd website
+          npm run build
+          cd dist
+          echo > .nojekyll
+          echo 'www.connormccarthy.org' > CNAME
+          cd ..
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-files
+          path: ./website/dist
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: production-files
+          path: ./pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pages
+          allow_empty_commit: true
