@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          path: main
+          path: website
       - name: Checkout data repo
         uses: actions/checkout@v3
         with:
@@ -23,16 +23,16 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-          cache-dependency-path: main/package-lock.json
+          cache-dependency-path: website/package-lock.json
       # - name: Install dependencies
       #   uses: bahmutov/npm-install@v1
       - name: Build project
-        run: cd main & npm run build
+        run: cd website && npm run build
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./main/dist
+          path: ./website/dist
   deploy:
     name: Deploy
     needs: build
