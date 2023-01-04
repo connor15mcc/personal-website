@@ -7,7 +7,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 // TODO: find out how to disable typing for imported yaml file;
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import data from '../data.yaml';
+import data from './../../resume/data.yaml';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
