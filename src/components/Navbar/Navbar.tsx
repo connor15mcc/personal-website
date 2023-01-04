@@ -5,25 +5,7 @@ import { debounce } from 'lodash';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const routes = [
-  {
-    index: true,
-    label: 'Connor McCarthy',
-    path: '/',
-  },
-  {
-    label: 'Experience',
-    path: '/#experience',
-  },
-  {
-    label: 'Projects',
-    path: '/projects',
-  },
-  {
-    label: 'About',
-    path: '/about',
-  },
-];
+import routes from './../../routes';
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -66,7 +48,9 @@ const Navbar = () => {
               <NavLink
                 key={l.label}
                 to={l.path}
-                className={({ isActive }) => (isActive ? 'nav-active' : 'nav-inactive')}
+                className={({ isActive }) =>
+                  isActive ? 'nav-active' : 'nav-inactive'
+                }
               >
                 {l.label}
               </NavLink>
