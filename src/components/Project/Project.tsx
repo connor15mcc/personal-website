@@ -16,7 +16,13 @@ export interface ProjectProp {
 
 function hslArraytoVal(arr: string) {
   return (
-    'hsl(' + arr[0] + ', ' + Math.min(+arr[1], 40) + '%, ' + Math.max(+arr[2], 80) + '%)'
+    'hsl(' +
+    arr[0] +
+    ', ' +
+    Math.min(+arr[1], 40) +
+    '%, ' +
+    Math.max(+arr[2], 80) +
+    '%)'
   );
 }
 
@@ -39,7 +45,6 @@ const Project = (props: ProjectProp) => {
   }
 
   const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format;
-  const date = new Date(props.date);
 
   return (
     <div
@@ -55,12 +60,16 @@ const Project = (props: ProjectProp) => {
       role="button"
       tabIndex={0}
     >
-      <img className="project-card-image" src={props.imagePath} alt={props.title} />
+      <img
+        className="project-card-image"
+        src={props.imagePath}
+        alt={props.title}
+      />
       <div className="project-card-content" style={titleStyle}>
         <h3 className="project-card-title">{props.title}</h3>
         <div className="project-card-secondrow">
           <span className="project-card-date">
-            {monthName(date) + ' ' + date.getFullYear()}
+            {monthName(props.date) + ' ' + props.date.getFullYear()}
           </span>
           {props.category == 'Coursework' && (
             <span className="project-card-tag">Coursework</span>
