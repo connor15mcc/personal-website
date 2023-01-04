@@ -8,9 +8,9 @@ const About = () => {
     <div id="about">
       <div className="about-content">
         <p className="about-paragraph">
-          My name is Connor McCarthy and I am senior engineering student at{' '}
-          <Link to="/#Cornell">Cornell University</Link> seeking a full-time
-          software engineering opportunity to join upon my graduation in May.
+          My name is Connor McCarthy and I am senior engineering student at
+          Cornell University seeking a full-time software engineering
+          opportunity to join upon my graduation in May.
         </p>
         <p className="about-paragraph">
           I have experience working with large scale distributed systems at{' '}
@@ -25,10 +25,11 @@ const About = () => {
           product.
         </p>
         <p className="about-paragraph">
-          I have greatly enjoyed the classes I&apos;ve taken thus far at Cornell
-          and have excelled in them. I find problems related to optimizing the
-          efficenciency of marketplaces through incentives particularly
-          interesting and have organized minors in{' '}
+          I have greatly enjoyed the classes I&apos;ve taken{' '}
+          <Link to="/#Cornell">thus far at Cornell</Link> and have excelled in
+          them. I find problems related to optimizing the efficenciency of
+          marketplaces through incentives particularly interesting and have
+          organized minors in{' '}
           <a href="https://business.cornell.edu/programs/undergraduate/minors/business-engineers/">
             business
           </a>{' '}
