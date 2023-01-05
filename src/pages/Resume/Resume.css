@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .resume-section {
+  font-family: 'PT Serif', serif;
+
   margin-top: 1em;
   padding: 1em 2em;
-  background-color: #fff;
+  background-color: var(--llll-gray);
   border-radius: 1%;
   border: 1px solid #000;
   box-shadow: 2em 2em 5em #aaa;

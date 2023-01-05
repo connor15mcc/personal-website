@@ -9,8 +9,8 @@ const About = () => {
       <div className="about-content">
         <p className="about-paragraph">
           My name is Connor McCarthy and I am senior engineering student at
-          Cornell University seeking a full-time software engineering
-          opportunity to join upon my graduation in May.
+          Cornell University currently looking for a full-time software
+          engineering opportunity to join upon my graduation in May.
         </p>
         <p className="about-paragraph">
           I have experience working with large scale distributed systems at{' '}

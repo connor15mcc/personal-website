@@ -22,7 +22,6 @@ nav {
   padding: 2em;
   box-shadow: 0em 0em 0.2em black;
 
-  font-variant: small-caps;
   color: var(--ll-gray);
   font-weight: bold;
 }

@@ -11,12 +11,11 @@ const Home = (props: Basics) => {
   const name = props.name.split(' ');
   return (
     <div id="home">
-      <p className="home-intro">Hi, my name is</p>
       <div className="home-firstline">
         <img src="me.jpg" alt={props.name} className="home-picture" />
         <h1 className="home-name">
           {name[0]}
-          <br></br>
+          <br />
           {name[1]}
         </h1>
       </div>
