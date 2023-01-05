@@ -44,7 +44,6 @@ const Project = (props: ProjectProp) => {
     }
   }
 
-  console.log(props.date);
   const dateFormat = new Intl.DateTimeFormat('en-US', {
     month: 'long',
     year: 'numeric',
