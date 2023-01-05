@@ -1,39 +1,23 @@
 import Accordion from './../../components/Accordion/Accordion';
 import DescList from './../../components/DescList/DescList';
+import { Education as EducationType } from './../../data';
 import ResumeItem from './ResumeItem';
 
-const Education = (props: {
-  data: {
-    institution: string;
-    college: string;
-    location: string;
-    degree: string;
-    end_date: string;
-    link?: string;
-    coursework: {
-      type: string;
-      classes: {
-        name: string;
-        number: string;
-        link?: string;
-      }[];
-    }[];
-  };
-}) => {
+const Education = (props: EducationType) => {
   return (
     <>
       <div className="resume-subsection">
         <div className="resume-subsection-title">Education</div>
         <ResumeItem
-          id={props.data.institution.split(' ')[0]}
-          name={props.data.institution + ', ' + props.data.college}
-          location={props.data.location}
-          title={props.data.degree}
-          date={props.data.end_date}
-          link={props.data.link}
+          id={props.institution.split(' ')[0]}
+          name={props.institution + ', ' + props.college}
+          location={props.location}
+          title={props.degree}
+          date={props.end_date}
+          link={props.link}
         ></ResumeItem>
         <DescList
-          items={props.data.coursework.map((elt) => ({
+          items={props.coursework.map((elt) => ({
             label: elt.type + ' Coursework',
             content: (
               <Accordion

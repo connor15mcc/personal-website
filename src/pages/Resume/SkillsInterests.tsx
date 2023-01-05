@@ -2,16 +2,17 @@ import { useNavigate } from 'react-router-dom';
 
 import Accordion from './../../components/Accordion/Accordion';
 import DescList from './../../components/DescList/DescList';
+import { Resume } from './../../data';
 
 const SkillsInterests = (props: {
-  skills: string[];
-  projects: { resumeDesc?: string; title: string }[];
-  other: string;
+  skills: Resume['skills'];
+  projects: Resume['projects'];
+  other: Resume['other'];
 }) => {
   const navigate = useNavigate();
 
   const displayedProjects = props.projects.filter(
-    (elt): elt is { resumeDesc: string; title: string } => elt.resumeDesc !== undefined,
+    (elt) => elt.resumeDesc !== undefined
   );
   return (
     <>
@@ -27,12 +28,12 @@ const SkillsInterests = (props: {
               label: 'Projects',
               content: (
                 <Accordion
-                  label={displayedProjects.map((elt) => elt.resumeDesc).join('; ') + '.'}
+                  label={
+                    displayedProjects.map((elt) => elt.resumeDesc).join('; ') +
+                    '.'
+                  }
                   expanded={props.projects
-                    .filter(
-                      (elt): elt is { resumeDesc: string; title: string } =>
-                        elt.resumeDesc !== undefined,
-                    )
+                    .filter((elt) => elt.resumeDesc !== undefined)
                     .map((elt) => (
                       // eslint-disable-next-line jsx-a11y/anchor-is-valid
                       <a

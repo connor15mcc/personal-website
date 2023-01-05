@@ -4,10 +4,7 @@ import './App.css';
 import { Suspense, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-// TODO: find out how to disable typing for imported yaml file;
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import data from './../../resume/data.yaml';
+import data from './data';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
@@ -37,8 +34,8 @@ function App() {
 
   const homePage = (
     <>
-      <Home data={data.basics} />
-      <Resume data={data} name={data.basics.name} />
+      <Home {...data.basics} />
+      <Resume {...data} name={data.basics.name} />
     </>
   );
 
