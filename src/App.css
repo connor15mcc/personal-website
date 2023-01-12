@@ -49,4 +49,5 @@ button:focus {
   --d-gray: #333;
 
   scroll-behavior: smooth;
+  scroll-padding-top: 4em;
 }
