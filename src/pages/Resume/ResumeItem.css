@@ -3,7 +3,7 @@
 }
 
 .item-spacing {
-  margin-bottom: 0.75em;
+  margin-bottom: 1em;
 }
 
 .item-header {
@@ -20,16 +20,25 @@
   font-weight: bold;
 }
 
+.item-title {
+  font-style: italic;
+}
+
 .item-date {
   font-style: italic;
+  margin-left: auto;
 }
 
 .item-bullets {
   list-style-type: none;
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 2em;
 }
 
 .item-bullet::before {
   content: '-';
-  padding: 0 0.5em 0em 1.5em;
+  position: absolute;
+  /* padding: 0 0.5em 0em 1.5em; */
+  left: 0;
+  padding-left: 1em;
 }

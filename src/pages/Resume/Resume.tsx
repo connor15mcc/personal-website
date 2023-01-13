@@ -12,11 +12,15 @@ const Resume = (props: ResumeType & { name: string }) => {
       <Education {...props.university} />
       <Experience
         experiences={props.professional_experience}
-        type="Professional"
+        type="Professional Experience"
       />
       <Experience
         experiences={props.extracurricular_experience}
-        type="Extracurricular"
+        type="Extracurricular Experience"
+      />
+      <Experience
+        experiences={props.other_experience}
+        type="Continual Learning"
       />
       <SkillsInterests
         skills={props.skills}

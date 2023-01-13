@@ -37,11 +37,11 @@ export interface Education {
 
 export interface Experience {
   company: string;
-  location: string;
-  title: string;
-  start_date: string;
+  location?: string;
+  title?: string;
+  start_date?: string;
   end_date: string;
-  link: string;
+  link?: string;
   highlights?: string[];
   tech_recap?: string;
 };
@@ -60,6 +60,7 @@ export interface Resume {
   university: Education;
   professional_experience: Experience[];
   extracurricular_experience: Experience[];
+  other_experience: Experience[];
   skills: string[];
   projects: Project[];
   other: string;
@@ -70,6 +71,7 @@ const Data: {
   university: Education;
   professional_experience: Experience[];
   extracurricular_experience: Experience[];
+  other_experience: Experience[];
   skills: string[];
   projects: Project[];
   other: string;

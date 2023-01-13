@@ -5,18 +5,18 @@ const Experience = (props: { experiences: ExperienceType[]; type: string }) => {
   return (
     <>
       <div className="resume-subsection">
-        <div className="resume-subsection-title">{props.type} Experience</div>
+        <div className="resume-subsection-title">{props.type}</div>
         {props.experiences.map((elt) => (
           <ResumeItem
             key={elt.company + elt.start_date}
-            name={elt.company}
+            company={elt.company}
             location={elt.location}
             title={elt.title}
-            date={elt.start_date + ' – ' + elt.end_date}
-            bottomMargin={true}
+            start_date={elt.start_date}
+            end_date={elt.end_date}
             link={elt.link}
-            bullets={elt.highlights}
-            skills={elt.tech_recap}
+            highlights={elt.highlights}
+            tech_recap={elt.tech_recap}
           />
         ))}
       </div>

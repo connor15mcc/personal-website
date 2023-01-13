@@ -2,13 +2,13 @@ import './ResumeItem.css';
 
 import classNames from 'classnames';
 
-const ResumeItem = (props: ItemProps) => {
+import { Experience as ExperienceType } from './../../data';
+
+const ResumeItem = (props: ExperienceType & { id?: string }) => {
   return (
     <div
-      className={classNames('item-info', {
-        'item-spacing': props.bottomMargin,
-      })}
-      id={props.id ? props.id : props.name}
+      className={classNames('item-info', 'item-spacing')}
+      id={props.id ? props.id : props.company}
     >
       <div className="item-header">
         {props.link ? (
@@ -18,44 +18,42 @@ const ResumeItem = (props: ItemProps) => {
             target="_blank"
             rel="noreferrer"
           >
-            {props.name}
+            {props.company}
           </a>
         ) : (
-          <span className="item-name">{props.name}</span>
+          <span className="item-name">{props.company}</span>
         )}
-        <span className="item-location">{props.location}</span>
+        <span className="item-date">
+          {props.start_date
+            ? props.start_date + ' – ' + props.end_date
+            : props.end_date}
+        </span>
         <hr></hr>
-        <span className="item-title">{props.title}</span>
-        <span className="item-date">{props.date}</span>
+        {props.title ? (
+          <span className="item-title">{props.title}</span>
+        ) : (
+          <span className="item-title"></span>
+        )}
+        {props.location && (
+          <span className="item-location">{props.location}</span>
+        )}
       </div>
       <ul className="item-bullets">
-        {props.bullets &&
-          props.bullets.map((b, i) => (
-            <li key={i + b} className="item-bullet">
-              {b}
+        {props.highlights &&
+          props.highlights.map((h, i) => (
+            <li key={i + h} className="item-bullet">
+              {h}
             </li>
           ))}
-        {props.skills && (
+        {props.tech_recap && (
           <li className="item-bullet">
             <b>Used: </b>
-            {props.skills}.
+            {props.tech_recap}.
           </li>
         )}
       </ul>
     </div>
   );
 };
-
-export interface ItemProps {
-  id?: string;
-  name: string;
-  location: string;
-  title: string;
-  date: string;
-  link?: string;
-  bottomMargin?: boolean;
-  bullets?: string[];
-  skills?: string;
-}
 
 export default ResumeItem;

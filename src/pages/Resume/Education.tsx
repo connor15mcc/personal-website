@@ -10,10 +10,10 @@ const Education = (props: EducationType) => {
         <div className="resume-subsection-title">Education</div>
         <ResumeItem
           id={props.institution.split(' ')[0]}
-          name={props.institution + ', ' + props.college}
+          company={props.institution + ', ' + props.college}
           location={props.location}
           title={props.degree}
-          date={props.end_date}
+          end_date={props.end_date}
           link={props.link}
         ></ResumeItem>
         <DescList
