@@ -7,29 +7,33 @@ body {
   overflow-y: scroll;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 520px) {
   body {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 }
 
-.main-container a {
-  background-color: hsla(0, 0%, 50%, 0.2);
-}
-
-a {
+a,
+.underline-hover {
   position: relative;
-  border-radius: 0.2em;
 
-  background-image: linear-gradient(var(--primary-color), var(--primary-color));
-  background-position: 0% 100%;
+  background-image: none,
+    linear-gradient(var(--primary-color), var(--primary-color));
+  background-size: 100% 0.15em, 0 0.15em;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  background-size: 0% 0.2em;
-  transition: 0.3s;
+  transition: background-size 0.3s ease;
 }
 
-a:hover {
-  background-size: 100% 0.2em;
+.main-container a,
+.underline-hover {
+  background-image: linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--primary-color), var(--primary-color));
+}
+
+a:hover,
+.underline-hover:hover {
+  background-size: 0 0.15em, 100% 0.15em;
 }
 
 button:hover,
@@ -39,7 +43,9 @@ button:focus {
 
 :root {
   --primary-color: #e0be56;
-  --secondary-color: #2a3763;
+  --secondary-color: #121b3c;
+
+  --link-color: #3f54a0;
 
   --lll-gray: #eee;
   --ll-gray: #ccc;

@@ -22,7 +22,7 @@ const Home = (props: Basics) => {
       <p className="home-tagline">{props.tagline}</p>
       <div>
         <button
-          className="home-button"
+          className="home-button underline-hover"
           onClick={() => navigate('/#experience')}
         >
           View Experience
