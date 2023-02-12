@@ -27,9 +27,9 @@ const About = () => {
         <p className="about-paragraph">
           I have greatly enjoyed the classes I&apos;ve taken{' '}
           <Link to="/#Cornell">thus far at Cornell</Link> and have excelled in
-          them. I find problems related to optimizing the efficenciency of
-          marketplaces through incentives particularly interesting and have
-          organized minors in{' '}
+          them. I&apos;m particularly interested in problems related to
+          marketplace efficiency and the optimization of said marketplaces
+          through aligned incentives &mdash; having organized minors in{' '}
           <a href="https://business.cornell.edu/programs/undergraduate/minors/business-engineers/">
             business
           </a>{' '}
@@ -37,10 +37,9 @@ const About = () => {
           <a href="https://www.orie.cornell.edu/orie/programs/undergraduate-programs/ore-minors">
             operations research
           </a>{' '}
-          research to pursue this interest. In addition, I&apos;ve taken
-          advanced classes in machine learning, computer vision, algorithms, and
-          database systems, which I look forward to applying throughout my
-          career.
+          to pursue this interest. In addition, I&apos;ve taken advanced classes
+          in machine learning, computer vision, algorithms, and database
+          systems, which I look forward to applying throughout my career.
         </p>
         <p className="about-paragraph">
           I am interested in building elegant solutions to complex problems, but
