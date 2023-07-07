@@ -29,7 +29,7 @@ function hslArraytoVal(arr: string) {
 const Project = (props: ProjectProp) => {
   function openLink() {
     if (props.link) {
-      window.open(props.link);
+      window.open("/" + props.link);
     }
   }
   let { data } = usePalette(props.imagePath, 10, 'hslArray');
