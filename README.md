@@ -1,3 +1,6 @@
+## Archived: this repository has been superseded by connor15mcc/lady-liberty (which
+is private at the time of writing) and is no longer maintained or deployed.
+
 # Personal Website
 
 This is my personal website showcasing my experiences, skills, and projects.
